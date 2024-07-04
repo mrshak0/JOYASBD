@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>GoldAPI</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="APIstyle.css">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" data-bs-theme="white">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="1Principal.html">
+          <img src="img/joya.png" alt="Logo" width="50" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ORO
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="2oroaros.html">AROS</a></li>
+                <li><a class="dropdown-item" href="anillos.html">ANILLOS</a></li>
+                <li><a class="dropdown-item" href="cadena.html">CADENAS</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PLATA
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="arosplata.html">AROS</a></li>
+                <li><a class="dropdown-item" href="anillosplata.html">ANILLOS</a></li>
+                <li><a class="dropdown-item" href="cadenaplata.html">CADENAS</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Información
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="sobrenosotros.html">¿Quiénes somos nosotros?</a></li>
+                <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+                <li><a class="dropdown-item" href="sucursales.html">Sucursales</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Cuenta
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="3insesion.html">Iniciar Sesión</a></li>
+                <li><a class="dropdown-item" href="4registro.html">Registrarse</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="API.html">Valor del Oro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="1Principal.html">Atrás</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</head>
+<body class="p-3 m-0 border-0 bd-example m-0 border-0">
+  <div class="container">
+    <div class="content-section text-center">
+      <h1>Precio en oro</h1>
+      <button id="apiRequestBtn" class="btn btn-primary mt-3">Saber Valor del Oro</button>
+      <div id="apiResponse" class="mt-3">
+          <table id="data-table" class="table table-dark table-bordered mt-3 d-none">
+              <thead>
+                  <tr>
+                      <th scope="col">Dato</th>
+                      <th scope="col">Valor</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- Aquí se insertarán los datos de la API -->
+              </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+  <script src="API.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+      document.getElementById('apiRequestBtn').addEventListener('click', function() {
+          fetch('url_de_tu_api') // Reemplaza esto con la URL real de tu API
+              .then(response => response.json())
+              .then(data => {
+                  const tbody = document.querySelector('#data-table tbody');
+                  tbody.innerHTML = ''; // Limpiar cualquier dato previo
+                  for (const key in data) {
+                      const tr = document.createElement('tr');
+                      tr.innerHTML = `<td>${key}</td><td>${data[key]}</td>`;
+                      tbody.appendChild(tr);
+                  }
+                  document.getElementById('data-table').classList.remove('d-none');
+              })
+              .catch(error => {
+                  console.error('Error al obtener los datos de la API:', error);
+              });
+      });
+  </script>
+</body>
+</html>

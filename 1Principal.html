@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>JOYAS</title>
+    <link rel="stylesheet" href="hojaestilo.css">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" data-bs-theme="white">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="1Principal.html">
+          <img src="img/joya.png" alt="Logo" width="50" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ORO
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="2oroaros.html">AROS</a></li>
+                <li><a class="dropdown-item" href="anillos.html">ANILLOS</a></li>
+                <li><a class="dropdown-item" href="cadena.html">CADENAS</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PLATA
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="arosplata.html">AROS</a></li>
+                <li><a class="dropdown-item" href="anillosplata.html">ANILLOS</a></li>
+                <li><a class="dropdown-item" href="cadenaplata.html">CADENAS</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Información
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="sobrenosotros.html">¿Quiénes somos nosotros?</a></li>
+                <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+                <li><a class="dropdown-item" href="sucursales.html">Sucursales</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Cuenta
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="3insesion.html">Iniciar Sesión</a></li>
+                <li><a class="dropdown-item" href="4registro.html">Registrarse</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="API.html">Valor del Oro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="1Principal.html">Atrás</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <style> 
+      
+        .carousel-container {
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 500px; 
+        }
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+            margin: 20px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #f5e0d3;
+            color: black;
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .card-text {
+            margin: 0;
+        }
+    </style>
+  </head>
+<body class="p-3 m-0 border-0 bd-example m-0 border-0"> 
+  <br>
+
+  <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/carrusel4.jpg" class="d-block w-100" width="590" alt="imagen 1">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="img/carrusel3.jpg" class="d-block w-100" width="590" alt="imagen 2">
+      </div>
+      <div class="carousel-item">
+        <img src="img/carrusel.webp" class="d-block w-100" width="590" alt="imagen 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+<br>
+<div class="container text-center">
+  <h1>Productos más vendidos</h1>
+  <div class="d-flex justify-content-center flex-wrap">
+      <div class="flip-card">
+          <div class="flip-card-inner">
+              <div class="flip-card-front">
+                  <img src="img/card1.jpg" class="card-img-top" style="width:300px;height:300px;" alt="Card1">
+              </div>
+              <div class="flip-card-back">
+                  <p class="card-text">Producto disponible.</p>
+                  <p class="card-text">Conjunto de Aros con Anillo.</p>
+                  <p class="card-text">$56.990</p>
+              </div>
+          </div>
+      </div>
+      <div class="flip-card">
+          <div class="flip-card-inner">
+              <div class="flip-card-front">
+                  <img src="img/card2.jpg" class="card-img-top" style="width:300px;height:300px;" alt="Card2">
+              </div>
+              <div class="flip-card-back">
+                  <p class="card-text">Producto disponible.</p>
+                  <p class="card-text">$25.000</p>
+              </div>
+          </div>
+      </div>
+      <div class="flip-card">
+          <div class="flip-card-inner">
+              <div class="flip-card-front">
+                  <img src="img/card3.jpg" class="card-img-top" style="width:300px;height:300px;" alt="Card3">
+              </div>
+              <div class="flip-card-back">
+                  <p class="card-text">Producto disponible.</p>
+                  <p class="card-text">$25.000</p>
+              </div>
+          </div>
+      </div>
+      <div class="flip-card">
+          <div class="flip-card-inner">
+              <div class="flip-card-front">
+                  <img src="img/card4.jpg" class="card-img-top" style="width:300px;height:300px;" alt="Card4">
+              </div>
+              <div class="flip-card-back">
+                  <p class="card-text">Producto disponible.</p>
+                  <p class="card-text">$25.000</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

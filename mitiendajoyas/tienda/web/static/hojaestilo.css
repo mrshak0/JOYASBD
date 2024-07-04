@@ -1,0 +1,128 @@
+body{
+background-color: #f5e0d3;
+}
+
+.img_r {
+width: 100%;
+max-width: 200px;
+height: 100%;
+max-height: 250px;
+}
+
+h1 {
+font-family: "h1", "h5", cursive;
+font: 150% sans-serif;
+font-weight: 400;
+font-style: normal;
+color: rgb(0, 0, 0);
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.form-register {
+width: 400px;
+background: #f2e9e1;
+padding: 30px;
+margin: auto;
+margin-top: 100px;
+border-radius: 4px;
+font-family: 'calibri';
+color: rgb(0, 0, 0);
+box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4 {
+font-size: 22px;
+margin-bottom: 20px;
+}
+
+.controls {
+width: 100%;
+background: #fafcfe;
+padding: 10px;
+border-radius: 4px;
+margin-bottom: 16px;
+border: 1px solid #000000;
+font-family: 'calibri';
+font-size: 18px;
+color: rgb(7, 7, 7);
+}
+
+.form-register p {
+height: 40px;
+text-align: center;
+font-size: 18px;
+line-height: 40px;
+}
+
+.form-register a {
+color: white;
+text-decoration: none;
+}
+
+.form-register a:hover {
+color: white;
+text-decoration: underline;
+}
+
+.form-register .botons {
+width: 100%;
+background: #000000;
+border: none;
+padding: 12px;
+color: white;
+margin: 16px 0;
+font-size: 16px;
+}
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 60%;
+      margin: auto;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #833061;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  

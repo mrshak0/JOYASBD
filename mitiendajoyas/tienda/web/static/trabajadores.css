@@ -1,0 +1,40 @@
+/* trabajadores.css */
+
+body {
+    background-color: #f5e0d3; /* Color de fondo */
+    font-family: Arial, sans-serif; /* Familia de fuentes */
+    padding: 20px; /* Espaciado interior */
+}
+
+.container {
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin: auto; /* Centrar contenido */
+    text-align: center; /* Alinear al centro */
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px; /* Espaciado interior */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+h1 {
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+table {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Colapso de bordes */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+table, th, td {
+    border: 1px solid #ddd; /* Borde delgada gris */
+    padding: 8px; /* Espaciado interior */
+}
+
+th {
+    background-color: #f2f2f2; /* Color de fondo gris claro para encabezados */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color de fondo gris claro para filas pares */
+}

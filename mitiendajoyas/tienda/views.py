@@ -1,6 +1,12 @@
 from django.shortcuts import render
+from .models import Trabajador, Genero
 
 # Create your views here.
+
+def index(request):
+    tienda= Trabajador.objects.all()
+    context={"tienda":tienda}
+    return render(request, 'tienda/index.html', context)
 
 def principal(request):
     context={}

@@ -45,7 +45,9 @@ def contacto(request):
     return render(request, 'tienda/contacto.html', context)
 
 def insesion(request):
-    context={}
+    request.session["usuario"]="cgarcia"
+    usuario=request.session["usuario"]
+    context={'usuario':usuario}
     return render(request, 'tienda/insesion.html', context)
 
 def oroaros(request):
@@ -63,6 +65,7 @@ def sobrenosotros(request):
 def sucursales(request):
     context={}
     return render(request, 'tienda/sucursales.html', context)
+
 
 
 

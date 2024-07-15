@@ -20,7 +20,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-STATICFILES_DIRS = ['C:/Users/matia/OneDrive/Documentos/GitHub/JOYASBD/mitiendajoyas/tienda/web/static'
+STATICFILES_DIRS = ['C:/Users/SSDD/Documents/GitHub/JOYASBD/mitiendajoyas/tienda/web/static'
 ]
 
 # URL base para los archivos estáticos (CSS, JavaScript, Imágenes)

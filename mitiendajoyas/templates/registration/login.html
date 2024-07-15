@@ -76,25 +76,12 @@
 </head>
 <body class="p-3 m-0 border-0 bd-example m-0 border-0">
     <div class="login-form">
-      <form action="principal" method="POST" id="form">
-          <h2>Inicio de Sesión</h2>
-          <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email" class="form-control">
-          </div>
-          <div class="form-group">
-              <label for="contraseña">Contraseña</label>
-              <input type="password" name="contraseña" id="contraseña" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-         
-          <a href="registro" class="btn btn-primary forgot-password">Crea tu cuenta acá</a>
-          
-          <a href="#" class="btn btn-primary forgot-password">Olvidé mi Contraseña</a>
-          <p class="warnings" id="warnings"></p>
+      <h2>Inicio de Sesión</h2>
+      <form method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit">Iniciar</button>
       </form>
-  </div>
-<script src="{% static 'inisesion.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 

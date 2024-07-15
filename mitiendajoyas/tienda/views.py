@@ -1,15 +1,18 @@
 from django.shortcuts import render
 from .models import Trabajador, Genero
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-
+@login_required
 def index(request):
     tienda= Trabajador.objects.all()
     context={"tienda":tienda}
     return render(request, 'tienda/index.html', context)
 
 def principal(request):
-    context={}
+    request.session["usuario"]="Matias"
+    usuario=request.session["usuario"]
+    context={'usuario':usuario}
     return render(request, 'tienda/principal.html', context)
 
 def anillos(request):
@@ -44,12 +47,10 @@ def contacto(request):
     context={}
     return render(request, 'tienda/contacto.html', context)
 
-def insesion(request):
-    request.session["usuario"]="cgarcia"
-    usuario=request.session["usuario"]
-    context={'usuario':usuario}
-    return render(request, 'tienda/insesion.html', context)
-
+def login(request):
+    context={}
+    return render(request, 'tienda/login.html', context)
+   
 def oroaros(request):
     context={}
     return render(request, 'tienda/oroaros.html', context)
